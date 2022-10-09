@@ -69,3 +69,7 @@ Combination of `cloudfront:setup` and `cloudfront:build:deploy` commands with or
 ### `serverless:remove`
 
 Remove an entire stack configured in `serverless.yml` via CloudFormation.
+
+S3 Url : https://electronics-gadets.s3.amazonaws.com/admin/products
+
+CloudFront Url : https://d1o22tjb6b5f5r.cloudfront.net/
