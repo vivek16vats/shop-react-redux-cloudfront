@@ -1,4 +1,4 @@
-service: my-store-app
+service: mobile-store
 
 frameworkVersion: "3"
 
@@ -19,7 +19,7 @@ plugins:
 
 custom:
   client:
-    bucketName: electronics-gadets
+    bucketName: mobile-store
     distributionFolder: dist
   s3BucketName: ${self:custom.client.bucketName}
 
@@ -28,6 +28,14 @@ custom:
   serverless-s3-cleaner:
     buckets:
       - ${self:custom.client.bucketName}
+
+functions: 
+ hello:
+  handler: src/mocks/handlers.ts
+  events: 
+   - http:
+      path: product
+      method: get
 
 resources:
   Resources:

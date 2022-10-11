@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import MainLayout from "~/components/MainLayout/MainLayout";
 import PageProductForm from "~/components/pages/PageProductForm/PageProductForm";
 import PageOrders from "~/components/pages/PageOrders/PageOrders";
@@ -14,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<PageProducts />} />
         <Route path="cart" element={<PageCart />} />
+        <Route path="*" element={<Navigate to="/" />} />
         <Route path="admin/orders">
           <Route index element={<PageOrders />} />
           <Route path=":id" element={<PageOrder />} />
