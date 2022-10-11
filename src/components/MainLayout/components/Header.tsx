@@ -33,7 +33,7 @@ export default function Header() {
             underline="none"
             to="/"
           >
-            Mega Store!
+            Mobile Store!
           </Link>
         </Typography>
 
